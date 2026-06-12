@@ -94,6 +94,8 @@ If a plan breaks mid-execution, stop and re-plan. Otherwise ask at most one clar
 
 Delegate to a subagent only when exploration would flood the main context or a bounded responsibility benefits from isolation. Give each subagent one clear responsibility and integrate the result before treating it as final.
 
+Before spawning a subagent, choose the correct model tier for its task to optimize cost: use a small/fast model (e.g. Haiku-class) for search, summarization, and mechanical work; a mid-tier model (e.g. Sonnet-class) for routine implementation; and reserve the strongest model for complex reasoning, architecture, or debugging. Use the agent type's recommended default when one exists; do not pass the most expensive model by default.
+
 ### 2. Keep Changes Small, Simple, And Surgical
 
 Work in increments a reviewer can hold in their head, not one large drop. Prefer the simplest construction that meets the requirement: no speculative abstractions, no defensive scaffolding the task does not need. Every changed line must trace to the request. Leave orthogonal code and comments untouched. Spelled out because these remain the most-reported agent failure modes.
