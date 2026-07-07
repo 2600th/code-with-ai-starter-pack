@@ -92,7 +92,7 @@ For large or ambiguous features, interview the user first and capture a short sp
 
 If a plan breaks mid-execution, stop and re-plan. Otherwise ask at most one clarifying question per turn, and only when a missing detail materially changes implementation or risk. State assumptions you proceed on and name them in your reply. Push back on flawed premises instead of guessing forward.
 
-For non-trivial work, start with a one-phrase blast-radius read such as "low-blast, reversible" or "high-blast: touches auth and data." Let that set the amount of planning and proof: shallow checks are enough for small reversible edits, while auth, data, deployment, migrations, public contracts, or shared state need broader verification.
+For non-trivial work, start with a one-phrase blast-radius read such as "low-blast, reversible" or "high-blast: touches auth and data." Let that set the amount of planning and proof: shallow checks are enough for small reversible edits, while auth, data, deployment, migrations, public contracts, or shared state need broader verification. For goal-backed or recurring loop work, write the contract before starting: one objective, verification evidence, constraints, allowed scope, iteration policy, stop conditions, and progress log location. Use a loop only when the next action should depend on fresh feedback and the finish line is observable; use an ordinary prompt or plan for one-shot work, taste-only work, or ambiguous discovery.
 
 Delegate to a subagent only when exploration would flood the main context or a bounded responsibility benefits from isolation. Give each subagent one clear responsibility and integrate the result before treating it as final.
 

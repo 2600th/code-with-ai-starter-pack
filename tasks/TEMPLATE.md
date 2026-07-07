@@ -37,6 +37,21 @@ Prefer checks a command can prove. Add manual checks only when no command can pr
 - [ ] Automated: 
 - [ ] Manual: 
 
+## Goal / Loop Contract
+
+Fill this only for goal-backed work or a recurring loop.
+
+- Trigger:
+- Objective:
+- Verification evidence:
+- Constraints:
+- Allowed scope and tools:
+- Iteration policy:
+- Stop or ask conditions:
+- Progress log:
+- Budget or max iterations:
+- Terminal states: success | no-op | blocked | exhausted
+
 ## Execution Plan
 
 - [ ] Step 1: action -> verify: 
