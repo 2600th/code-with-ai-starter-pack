@@ -59,10 +59,12 @@ Append `.gitignore.snippet` to the project `.gitignore` as one block preceded by
 
 Everything added must pass two tests: would removing it cause an agent to make a mistake, and is it something an agent could NOT discover by reading the code? When unsure, leave it out.
 
+- Examples over prose: when documenting style or workflow, prefer one short, real local example over paragraphs of explanation. Do not restate language or framework defaults.
 - Known Gotchas: scan README, CONTRIBUTING, docs, CI configs, and issue or PR templates for documented quirks, required flags, ordering constraints, and footguns. Record each as one line in `AGENTS.md` Known Gotchas with a date or source reference.
 - Repo etiquette: if commit message, branch, or PR conventions are documented or consistent in recent history, capture them as a `### Repo Etiquette` subsection under Project Facts. If the team wants it, include a norm that PRs declare substantial LLM-written code the author does not fully understand.
 - Domain vocabulary: if the repo uses terms an outsider would misread, add a `### Domain Vocabulary` subsection (term, meaning, source of truth).
 - Subtree conventions: where a subtree has genuinely different rules (a strict API layer, generated directories, docs with their own style), prefer a short nested `AGENTS.md` in that directory, which all major tools pick up. Use `.claude/rules/<topic>.md` with `paths:` frontmatter only for Claude-specific mechanics, per `.claude/rules/README.md`. Do not create either speculatively.
+- Conditional workflows: keep root `AGENTS.md` for always-on rules. Move recurring multi-step workflows, rare procedures, or tool-specific behavior into scoped rules, nested `AGENTS.md` files, skills, or linked docs when the target tool supports them.
 - Add no entries to `tasks/lessons.md`. Lessons are earned from observed mistakes, not generated at setup.
 
 ### Step 5: Tailor CLAUDE.md (optional)

@@ -11,6 +11,10 @@ User-visible outcome:
 
 Relevant files, errors, logs, screenshots, docs, or examples:
 
+Sources / Evidence:
+
+- Add links, commands, logs, screenshots, or baseline counts here.
+
 ## Assumptions
 
 - 
