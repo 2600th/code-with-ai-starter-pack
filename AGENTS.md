@@ -94,9 +94,9 @@ If a plan breaks mid-execution, stop and re-plan. Otherwise ask at most one clar
 
 For non-trivial work, start with a one-phrase blast-radius read such as "low-blast, reversible" or "high-blast: touches auth and data." Let that set the amount of planning and proof: shallow checks are enough for small reversible edits, while auth, data, deployment, migrations, public contracts, or shared state need broader verification. For goal-backed or recurring loop work, write the contract before starting: one objective, verification evidence, constraints, allowed scope, iteration policy, stop conditions, and progress log location. Use a loop only when the next action should depend on fresh feedback and the finish line is observable; use an ordinary prompt or plan for one-shot work, taste-only work, or ambiguous discovery.
 
-Delegate to a subagent only when exploration would flood the main context or a bounded responsibility benefits from isolation. Give each subagent one clear responsibility and integrate the result before treating it as final.
+Delegate to a subagent only when exploration would flood the main context, parallel work would materially improve speed or quality, or a bounded responsibility benefits from isolation. Give each subagent one clear objective, the necessary context, explicit deliverables, and a verification criterion. Review and integrate its output before treating it as final.
 
-Before spawning a subagent, choose the correct model tier for its task to optimize cost: use a small/fast model (e.g. Haiku-class) for search, summarization, and mechanical work; a mid-tier model (e.g. Sonnet-class) for routine implementation; and reserve the strongest model for complex reasoning, architecture, or debugging. Use the agent type's recommended default when one exists; do not pass the most expensive model by default.
+When delegation is justified, use an Opus-class subagent by default. Do not use Haiku-class models. Spawn another Fable subagent only when Fable identifies a specific capability gap that Opus is unlikely to handle reliably, such as exceptionally difficult reasoning, long-horizon autonomous work, complex cross-domain synthesis, or recovery after an inadequate Opus attempt. Uncertainty alone is not a reason to choose Fable.
 
 ### 2. Keep Changes Small, Simple, And Surgical
 
